@@ -1,0 +1,37 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Eat-Da-Burger app, written in node, express, handlebars, mysql",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemarq/burger.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mysql",
+    "handlebars",
+    "mvc",
+    "burger",
+    "game",
+    "sequelize"
+  ],
+  "author": "John-Mike Marquardt @codemarq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codemarq/burger/issues"
+  },
+  "homepage": "https://github.com/codemarq/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.8"
+  }
+}

@@ -1,0 +1,24 @@
+{{!-- the html where handlebars will render to --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		{{!-- bootstrap css --}}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		{{!-- bootswatch ubuntu orange --}}
+		{{!-- <link rel="stylesheet" type="text/css" href="http://bootswatch.com/united/bootstrap.min.css"> --}}
+
+		{{!-- css --}}
+		<link rel="stylesheet" href="/public/assets/css/burger_style.css" type="text/css">
+		<title>Eat the Burger!</title>
+	</head>
+	<body class="container">
+
+		{{{ body }}}
+
+		 <footer class="footer">&copy; 2016 John-Mike Marquardt  |  <a href="https://github.com/codemarq/burger">Github</a>  |  <a href="https://aqueous-oasis-21879.herokuapp.com/burgers">Heroku</a>
+  		</footer>
+	</body>
+</HTML>
