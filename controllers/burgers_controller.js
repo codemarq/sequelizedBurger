@@ -7,8 +7,12 @@ var express = require('express');
 // initiate router
 var router = express.Router();
 
-// require the burger.js file
-var burger = require('../models/burger.js');
+// and we bring in our models folder. This brings in the model's object, as defined in index.js
+var models = require('../models');
+
+var Burgers = require('../models')["burgers"];
+// extract our sequelize connection from the models object, to avoid confusion
+var sequelizeConnection = models.sequelize
 
 // ==================================================================================
 // ROUTES
@@ -18,9 +22,21 @@ router.get('/', function (req, res) {
 	res.redirect('/burgers');
 });
 
+
+// We run this query so that we can drop our tables even though they have foreign keys
+// sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
+
+// make our tables
+// note: force:true drops the table if it already exists
+// .then(function(){
+sequelizeConnection.sync({force:true});
+
+
+
+
 // route to handle select all
 router.get('/burgers', function (req, res) {
-	burger.selectAll(function (data) {
+	Burgers.findAll({}, function (data) {
 
 		var hbsObject = { 
 			burgers: data
