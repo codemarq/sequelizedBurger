@@ -38,7 +38,7 @@ var routes = require('./controllers/burgers_controller.js');
 
 var models = require('./models');
 
-models.sequelize.sync({force:true})
+// models.sequelize.sync({force:true})
 
 app.use('/', routes);
 

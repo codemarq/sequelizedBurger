@@ -29,38 +29,36 @@ router.get('/', function (req, res) {
 // make our tables
 // note: force:true drops the table if it already exists
 // .then(function(){
-sequelizeConnection.sync({force:true});
+// sequelizeConnection.sync({force:true});
 
 
 
 
 // route to handle select all
 router.get('/burgers', function (req, res) {
-	Burgers.findAll({}, function (data) {
+	Burgers.findAll({}).then(function(data) {
 
-		var hbsObject = { 
-			burgers: data
-		};
+		var burgersObject = {burgers:data};
 
 		// console.log(hbsObject);
-		res.render('index', hbsObject);
+		res.render('index', burgersObject);
 	});
 });
 
+
 // route to handle adding a new burger
 router.post('/burgers/insert', function (req, res) {
-	burger.insertOne(['burger_name'], [req.body.burger_name], function () {
+	Burgers.create({burger_name: req.body.burger_name}).then(function () {
 		res.redirect('/burgers');
 	});
 });
 
 // route to handle updating a burger (devouring it)
 router.put('/burgers/update/:id', function (req, res) {
-	var condition = 'id = ' + req.params.id;
+	var condition = req.params.id;
 
-	// console.log('condition', condition);
-
-	burger.updateOne({devoured: true}, condition, function () {
+	Burgers.update({devoured: true}, {where: {id: condition}})
+	.then(function(){
 		res.redirect('/burgers');
 	});
 });
