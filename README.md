@@ -1,4 +1,6 @@
-# Eat the Burger App
+[![NSP Status](https://nodesecurity.io/orgs/codemarq/projects/296975d2-0cad-4c33-a298-9f54496aae5f/badge)](https://nodesecurity.io/orgs/codemarq/projects/296975d2-0cad-4c33-a298-9f54496aae5f)
+
+# Sequelised Eat the Burger App
 
 Eat the Burger is a full-stack web app. This is a burger eating game using node, express, mysql, handlebars, sequelize, html and css. I originally built this app using traditional MySQL schema and seeds.  This version of the app had been rebuilt using the node package "Sequelize" to seed the database, and build models and their associated methods. 
 
