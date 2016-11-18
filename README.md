@@ -53,4 +53,4 @@ You should be able to click the "Add a Burger" button to add a burger to the MyS
 
 
 ## Author
-John-Mike Marquardt &copy; 2016
+&copy; 2016 John-Mike Marquardt [Github](https://github.com/codemarq) | [jmmarquardt.com](https://jmmarquardt.com)
