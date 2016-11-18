@@ -6,6 +6,9 @@ Eat the Burger is a full-stack web app. This is a burger eating game using node,
 
 User can enter any text to create a new burger.  The burger is stored to a sql database on the backend.  The list of burgers on the right is populated by the sql database, along with a "devour it" button.  Clicking the "devour it" button changes the devoured value of the burger in MySQL to "true", which then moves that burger over to the "devoured" column on the right.  The HTML is generated using the Handlebars templating engine in Node.js.  This is an exercise in persistent data and also an exercise in using O.R.M. and setting up a full-stack project using the MVC method. 
 
+## View on Heroku
+[Sequelized burger app](https://marquardt-sequelizedburger.herokuapp.com/)
+
 ## Screenshot
 
 ![ScreenShot](/public/assets/img/screenshot.png)
